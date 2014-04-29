@@ -47,6 +47,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && killa
 # screen backlight controls
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 && killall -SIGUSR1 i3status
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 && killall -SIGUSR1 i3status
+bindsym XF86KbdBrightnessUp exec --no-startup-id backlight.sh up && killall -SIGUSR1 i3status
+bindsym XF86KbdBrightnessDown exec --no-startup-id backlight.sh down && killall -SIGUSR1 i3status
 
 # kill focused window
 bindsym $mod+Shift+q kill
